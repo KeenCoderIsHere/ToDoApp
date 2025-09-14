@@ -120,11 +120,11 @@ function App() {
       </ul>
         <div className='task-status'>
           <div className='completed1'>
-          <CircularProgress progress={Math.round(((items.filter(item => item.done).length)/(items.length))*100)} color={'#38cb82'}/>
+          <CircularProgress progress={isNaN(Math.round(((items.filter(item => item.done).length)/(items.length))*100)) ? 0 : Math.round(((items.filter(item => item.done).length)/(items.length))*100)} color={'#38cb82'}/>
           <div><div className="green-dot"></div>Completed</div>
           </div>
           <div className='pending1'>
-          <CircularProgress progress={Math.round(((items.filter(item => !item.done).length)/(items.length))*100)} color={'blue'}/>
+          <CircularProgress progress={isNaN(Math.round(((items.filter(item => !item.done).length)/(items.length))*100)) ? 0 : Math.round(((items.filter(item => !item.done).length)/(items.length))*100)} color={'blue'}/>
           <div><div className='blue-dot'></div>Pending</div>
           </div>
           </div>
