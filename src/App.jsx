@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import Header from './header'
-
+import { FiArrowUpRight } from 'react-icons/fi'
+import { FaTrashAlt } from 'react-icons/fa'
 function App() {
   const [items, setItems] = useState([])
   const [inputValue, setInputValue] = useState("")
@@ -61,12 +62,15 @@ function App() {
           onClick={addItem}
         >
           Add Task
+          <FiArrowUpRight />
         </button>
 
         <button
           onClick={markAllAsDone}
           className='mark-all-as-done'
-        >Mark all as done</button>
+        >Mark all as done
+        <FiArrowUpRight />
+        </button>
       </div>
 
       <ul      >
@@ -113,7 +117,7 @@ function App() {
             <button
               className='delete-item'
               onClick={() => { deleteItem(item.id) }}
-            >Delete</button>
+            ><FaTrashAlt /></button>
             <p style={{fontSize: '12px'}}>Date Created : { item.id }</p>
           </li>
         })}
