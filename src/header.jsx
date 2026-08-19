@@ -1,5 +1,4 @@
-import './header.css'
-import React from "react";
+import "./header.css";
 
 function DateDisplay() {
   const today = new Date();
@@ -27,23 +26,25 @@ function DateDisplay() {
         fontFamily: "Montserrat",
         padding: "10px",
         borderRadius: "10px",
-        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.5)"
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.5)",
       }}
     >
-      <div style={{ fontWeight: "bold",color: "white", }}>{weekday}</div>
-      <div style={{color: "white",}}>{fullDate}</div>
+      <div style={{ fontWeight: "bold", color: "white" }}>{weekday}</div>
+      <div style={{ color: "white" }}>{fullDate}</div>
     </div>
   );
 }
 
 const Header = () => {
-  return(
+  return (
     <>
-    <div className="header-box">
-      <p className="header-text">Task <span style={{color: ''}}>Dash</span>board</p>
-    <DateDisplay />
-    </div>
+      <div className="header-box">
+        <p className="header-text">
+          Susheeth's Task <span style={{ color: "" }}>Dash</span>board
+        </p>
+        <DateDisplay />
+      </div>
     </>
-  )
-}
-export default Header
+  );
+};
+export default Header;
