@@ -37,4 +37,4 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-        run: npx vercel --prod --prebuilt --token $VERCEL_TOKEN --yes
+        run: npx vercel --prod --yes --token $VERCEL_TOKEN
